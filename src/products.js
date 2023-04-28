@@ -86,19 +86,24 @@ const products = [
   },
   {
     id: '13',
-    title: 'Samsung Galaxy S8',
-    description: '',
+    title: 'The Yellow Rose Bouquet',
+    description: 'There is nothing quite like receiving a bouquet of fresh yellow roses! Bursting with color, these are guaranteed to brighten your loved ones day. Presented in a clear glass vase, this bouquet is perfect for any of lifes special moments.',
     price: '399.99',
-    img: 'https://images2.imgbox.com/c2/14/zedmXgs6_o.png',
-    amount: 1,
+    img: 'https://cdn.floristone.com/large/E7-4808_d1.jpg',
   },
   {
     id: '14',
-    title: 'Samsung Galaxy S8',
-    description: '',
+    title: 'Simply Sweet',
+    description: 'Sometimes life is simplest pleasures deliver life is most poignant feelings. Take this sweet bouquet. Soft colors, beautiful flowers in a yellow vase that is wrapped in a pretty pink satin bow. Simple? You bet. Special? For sure! Bright yellow roses, pink asiatic lilies and alstroemeria, light yellow miniature carnations, lavender daisy spray chrysanthemums and pink limonium are gorgeously arranged in a pretty yellow vase, complete with a satin bow. Sweeter than sweet! Vase may vary.',
     price: '399.99',
-    img: 'https://images2.imgbox.com/c2/14/zedmXgs6_o.png',
-    amount: 1,
+    img: 'https://cdn.floristone.com/large/T18-1A_d1.jpg',
+  },
+   {
+    id: '15',
+    title: 'The Bountiful Garden Bouquet',
+    description: 'Send them on a stroll through the French countryside with this eye-catching rustic bouquet! The Victorian elegance will absolutely capture their attention and be adored by all who see it. Arranged to perfection in a natural oval woodchip basket are soft white and salmon roses, peach spray roses, white hydrangea, cream gilly flower, dusty miller stems and lush greens. This sophisticated bouquet is the perfect gift for any occasion!',
+    price: '69.99',
+    img: 'https://cdn.floristone.com/large/C3-5179_d1.jpg',
   },
 ];
 export default products;

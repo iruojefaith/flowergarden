@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, createSelector } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import productsData from '../products';
 
 export const fetchProducts = createAsyncThunk(
