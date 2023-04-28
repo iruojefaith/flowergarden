@@ -11,7 +11,7 @@ const Products = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className='grid grid-cols-4 gap-3 p-4' >
       {products.map(product => (
         <div key={product.id}>
         <img src={product.img} />
