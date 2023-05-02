@@ -1,12 +1,12 @@
 import {CartIcon} from './icons'
-
+import logo from './logo.png'
 
 const Navbar =  () => {
 
     return (
         <nav>
             <div className='nav-center'>
-                <h3>FlowerGarden</h3>
+               <img src={logo} alt="nav logo"  />
                 <div className='nav-container'>
                     <CartIcon />
                 </div>

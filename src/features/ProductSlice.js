@@ -1,10 +1,11 @@
-import { createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import productsData from '../products';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async () => {
-    return productsData;
+    const response = await axios.get('https://fakestoreapi.com/products');
+    return response.data;
   }
 );
 
@@ -16,7 +17,7 @@ const productsSlice = createSlice({
     error: null
   },
   reducers: {},
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
         state.status = 'loading';
@@ -31,7 +32,5 @@ const productsSlice = createSlice({
       });
   }
 });
-
-export const selectAllProducts = state => state.products.products;
 
 export default productsSlice.reducer;
