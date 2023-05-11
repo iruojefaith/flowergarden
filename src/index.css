@@ -8,7 +8,15 @@ Variables
 @tailwind utilities;
 
 :root {
-
+  --clr-primary: #efefef;
+  --clr-primary-dark: #282566;
+  --clr-primary-light: #a29dff;
+  --clr-grey-1: #102a42;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.25rem;
@@ -113,7 +121,7 @@ Navbar
   margin-top: 5rem;
 }
 nav {
-  background: var(--clr-primary);
+
   padding: 1.25rem 2rem;
 }
 .nav-center {
@@ -134,25 +142,25 @@ nav h3 {
   position: relative;
 }
 nav svg {
-  width: 40px;
-  color: var(--clr-white);
+  width: 70px;
+  color: #000;
 }
 .amount-container {
   position: absolute;
   top: -0.6rem;
   right: -0.6rem;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
-  background: var(--clr-primary-light);
+  background:  rgba(226, 138, 6, 0.812);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .total-amount {
-  color: var(--clr-white);
+  color: rgba(255, 255, 255, 0.826);
   margin-bottom: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 /*
 ===============

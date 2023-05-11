@@ -1,4 +1,4 @@
-const products = [
+const flowerproducts = [
   {
     id: '1',
     title: 'Make me blus',
@@ -106,4 +106,4 @@ const products = [
     img: 'https://cdn.floristone.com/large/C3-5179_d1.jpg',
   },
 ];
-export default products;
+export default flowerproducts;

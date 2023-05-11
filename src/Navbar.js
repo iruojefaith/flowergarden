@@ -9,6 +9,10 @@ const Navbar =  () => {
                <img src={logo} alt="nav logo"  />
                 <div className='nav-container'>
                     <CartIcon />
+                    <div className='amount-container'>
+                        <p className='total-amount'>0</p>
+                    </div>
+
                 </div>
             </div>
         </nav>
