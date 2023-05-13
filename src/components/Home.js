@@ -1,41 +1,37 @@
-import { useDispatch } from "react-redux";
-import { useGetAllProductsQuery } from "../features/apiProductSlice";
-import { addToCart } from "../features/cartSlice";
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart } from '../features/cartSlice';
+import { fetchProducts, selectAllProducts } from '../features/ProductSlice';
+import Products  from './flowerProducts'
 
-const Home =  () => {
+const Home = () => {
+  const dispatch = useDispatch();
+  const products = useSelector(selectAllProducts);
 
-    const { data, error, isLoading } = useGetAllProductsQuery()
-    const dispatch = useDispatch();
-    const handleAddToCart = (product) => {
-        dispatch(addToCart(product))
-    }
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
-    return (<main>
-        { isLoading ? (<p>Loading</p>
-        ) : error ? (<p> An error occured..</p>
-        ) : (
-        <>
-         <div className="container mx-auto product">
-      <h1>OtherProducts</h1>
-      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-     {data?.map((product) => (
-      <li key={product.id} className="bg-white rounded-lg shadow-md p-4">
-        <Link to={`/products/${product.id}`}>
-          <img src={product.image} alt={product.title} />
-          <h2 className="text-lg font-bold mb-2">{product.title}</h2>
-        </Link>
-     <p className="text-green-600 font-bold">£{product.price}</p>
-       <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
-       </li>
-    ))}
-      </ul>
-    </div>
-
-        </>
-        )}
-       </main>
-       )
-
+const handleAddToCart = (product) => {
+  dispatch(addToCart(product));
 }
-export default Home
+
+  return (
+    <div className="container mx-auto">
+      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {products.map((product) => (
+          <li key={product.id} className="bg-white rounded-lg shadow-md p-4">
+            <img src={product.img} alt={product.name} className="w-full h-64 object-cover" />
+            <h2 className="text-lg font-bold mb-2">{product.title}</h2>
+            <p className="text-green-600 font-bold">£{product.price}</p>
+
+            <button onClick={() => handleAddToCart(product)}>Add To Cart</button>
+          </li>
+        ))}
+      </ul>
+      <Products />
+      </div>
+  );
+};
+
+export default Home;
