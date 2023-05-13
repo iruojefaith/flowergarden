@@ -25,8 +25,10 @@ const Products =  () => {
           <img src={product.image} alt={product.title} className="h-32 w-full object-cover" />
           <h2 className="text-lg font-bold mb-2">{product.title.slice(0, 20)}...</h2>
         </Link>
-     <p className="text-green-600 font-bold">£{product.price}</p>
+        <div className='flex justify-between align-middle text-sm'>
+           <button className="text-green-600 font-bold cursor-default ">£{product.price}</button>
        <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+        </div>
        </li>
     ))}
       </ul>

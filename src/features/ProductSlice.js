@@ -9,9 +9,7 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 const initialState = {
- products: products,
-    amount: 0,
-    total: 0,
+ products: [],
     status: null,
 }
 
@@ -33,6 +31,6 @@ const ProductReducer = createSlice({
   },
 });
 
-export const selectAllProducts = state => state.products.products;
+
 
 export default ProductReducer.reducer;
